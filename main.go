@@ -15,5 +15,9 @@ func main() {
 	r := gin.Default()
 
 	r.POST("/account", controllers.AccountCreate)
+	r.GET("/account", controllers.AccountsGet)
+	r.GET("/account/:id", controllers.AccountGet)
+	r.PATCH("/account/:id", controllers.AccountUpdate)
+	r.DELETE("/account/:id", controllers.AccountDelete)
 	r.Run()
 }
